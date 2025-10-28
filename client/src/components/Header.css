@@ -1,0 +1,91 @@
+/* Header.css */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: #f8f9fa; /* Off-white shade */
+  color: #333333; /* Dark text for contrast on off-white */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Simplified transition */
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+header .logo img {
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Simplified hover */
+}
+
+header .logo img:hover {
+  transform: scale(1.05);
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff; /* Blue color for navbar links */
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #007bff; /* Blue hover color for navbar links */
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+nav button {
+  background: #007bff; /* Blue background for navbar button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background: #0056b3; /* Darker blue on hover for navbar button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav a, nav button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  header .logo img {
+    height: 45px;
+  }
+}

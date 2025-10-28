@@ -1,0 +1,59 @@
+/* Create Course page styles */
+#create-course-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--background-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+}
+
+#create-course-form h1 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+#create-course-form label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#create-course-form input,
+#create-course-form textarea,
+#create-course-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+#create-course-form input:focus,
+#create-course-form textarea:focus,
+#create-course-form select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+#create-course-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#create-course-form button:hover {
+  background-color: var(--primary-dark);
+}

@@ -1,0 +1,23 @@
+/* General Body and Layout */
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+}
+
+/* Header and Footer Styles (Replaced with dedicated component CSS) */
+/* The styles for Header and Footer are now handled by Header.css and Footer.css to prevent conflicts and improve modularity. */
+
+/* Page Content - Main Area */
+main {
+  padding: 2.5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.2;
+}

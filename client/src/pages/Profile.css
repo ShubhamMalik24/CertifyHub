@@ -1,0 +1,74 @@
+/* Profile page styles */
+.profile-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--background-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+}
+
+.profile-container h1 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+#user-info {
+  margin-bottom: 2rem;
+}
+
+#user-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+#user-info strong {
+  color: var(--text-primary);
+}
+
+#user-info img {
+  border: 3px solid var(--primary-light);
+}
+
+#user-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#user-info label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+#user-info input, #user-info textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+#user-info input:focus, #user-info textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+#enrolled-courses {
+  list-style: none;
+  padding: 0;
+}
+
+#enrolled-courses li {
+  background: var(--background-secondary);
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0.75rem;
+  border: 1px solid #e5e7eb;
+  transition: var(--transition);
+}
+
+#enrolled-courses li:hover {
+  box-shadow: var(--box-shadow-sm);
+}

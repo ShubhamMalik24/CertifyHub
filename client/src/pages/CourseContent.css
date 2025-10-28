@@ -1,0 +1,82 @@
+.course-content-page {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: var(--background-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+  padding: 2.5rem 2rem;
+}
+
+.course-content-page h2 {
+  color: var(--primary-dark);
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  background: var(--background-secondary);
+  border-radius: 9px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 9px;
+  transition: width 0.4s;
+}
+
+.modules-list {
+  list-style: none;
+  padding: 0;
+}
+
+.module-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--box-shadow-sm);
+  text-align: left;
+}
+
+.module-item label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.module-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.module-item ul li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.module-item button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.module-item button:hover {
+  background: var(--primary-dark);
+}
