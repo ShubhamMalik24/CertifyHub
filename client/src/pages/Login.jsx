@@ -58,7 +58,7 @@ const Login = () => {
         </p>
       </div>
       <div className="login-right">
-         <img src="https://www.shutterstock.com/image-vector/elegant-blue-golden-seal-stamp-600nw-260500034.jpg" alt="Login illustration" />
+         <img src="https://dce.harvard.edu/wp-content/uploads/sites/7/2023/12/choosing-classes.jpg" alt="Login illustration" />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  background: #f8f9fa; /* Off-white shade */
+  background: linear-gradient(rgb(194, 200, 227), rgb(180, 181, 192)); /* Off-white shade */
   color: #333333; /* Dark text for contrast on off-white */
   position: sticky;
   top: 0;
@@ -37,7 +37,7 @@ nav {
 nav a {
   text-decoration: none;
   color: #007bff; /* Blue color for navbar links */
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: color 0.3s ease;
   padding: 0.6rem 1.2rem;
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #007bff; /* Blue hover color for navbar links */
+  color: #6f7f91; /* Blue hover color for navbar links */
   background-color: rgba(52, 152, 219, 0.1);
 }
 

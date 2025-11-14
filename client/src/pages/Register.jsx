@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import apiRequest from '../utils/api';
+import './Register.css';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -23,9 +23,7 @@ const Register = () => {
       formData.append('role', role);
       formData.append('bio', bio);
       formData.append('skills', skills);
-      if (profilePicture) {
-        formData.append('profilePicture', profilePicture);
-      }
+      if (profilePicture) formData.append('profilePicture', profilePicture);
 
       const data = await apiRequest('/auth/register', 'POST', formData, false);
       alert('Registration successful! Please login.');
@@ -37,93 +35,98 @@ const Register = () => {
   };
 
   return (
-    <div className="centered-container">
-      <div className="auth-container glass-container">
-        <div className="auth-header">
-          <h2>Create Account</h2>
-          <p>Sign up for CertifyHub</p>
-        </div>
-        <form id="register-form" className="auth-form" onSubmit={handleSubmit} encType="multipart/form-data">
-          <div className="form-group">
-            <label className="form-label" htmlFor="name">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              className="form-input"
-              placeholder="Full Name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+    <div className="register-page">
+      {/* Left form side */}
+      <div className="register-left">
+        <h1>Create Your Account</h1>
+        <p>Join CertifyHub and start your journey today!</p>
+
+        <form onSubmit={handleSubmit} encType="multipart/form-data">
+          <div className="form-grid">
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <textarea
+                placeholder="Short Bio"
+                value={bio}
+                onChange={(e) => setBio(e.target.value)}
+                rows={3}
+              />
+            </div>
+
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Skills (comma separated)"
+                value={skills}
+                onChange={(e) => setSkills(e.target.value)}
+              />
+            </div>
+
+            <div className="form-group">
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+              >
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+              </select>
+            </div>
+
+            <div className="form-group file-upload">
+              <label className="file-label">
+                Upload Profile Picture
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={e => setProfilePicture(e.target.files[0])}
+                />
+              </label>
+            </div>
           </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              className="form-input"
-              placeholder="Email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              className="form-input"
-              placeholder="Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="bio">Short Bio</label>
-            <textarea
-              id="bio"
-              className="form-input"
-              placeholder="Short Bio"
-              value={bio}
-              onChange={(e) => setBio(e.target.value)}
-              rows={3}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="skills">Skills (comma separated)</label>
-            <input
-              type="text"
-              id="skills"
-              className="form-input"
-              placeholder="Skills (comma separated)"
-              value={skills}
-              onChange={(e) => setSkills(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="profilePicture">Profile Picture</label>
-            <input
-              type="file"
-              id="profilePicture"
-              className="form-input"
-              accept="image/*"
-              onChange={e => setProfilePicture(e.target.files[0])}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="role">Role</label>
-            <select id="role" className="form-input" value={role} onChange={(e) => setRole(e.target.value)}>
-              <option value="student">Student</option>
-              <option value="instructor">Instructor</option>
-            </select>
-          </div>
-          <button type="submit" className="btn btn-primary btn-full">Register</button>
+
+          <button type="submit" className="btn-register">REGISTER</button>
         </form>
-        <div className="auth-footer">
-          <p>Already have an account? <Link to="/login" className="auth-link">Login here</Link></p>
-        </div>
+
+        <p className="login-text">
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+      </div>
+
+      {/* Right image side */}
+      <div className="register-right">
+        <img
+          src="https://dce.harvard.edu/wp-content/uploads/sites/7/2023/12/choosing-classes.jpg"
+          alt="Register illustration"
+        />
       </div>
     </div>
   );

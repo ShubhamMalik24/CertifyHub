@@ -10,6 +10,12 @@ body {
 }
 
 /* -------------------- Layout -------------------- */
+
+.login-page:hover {
+  
+  box-shadow: 10px 20px 15px rgba(143, 118, 40, 0.2);
+}
+
 .login-page {
   display: flex;
   background: #562020;
@@ -28,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:linear-gradient(135deg, #667eea 0%, #ded7e5 100%);
+  background:linear-gradient(135deg, #e4ba7a 0%, #eae7e4 100%);
   border-radius: 32px 0 0 32px; /* fully rounded on left side */
 }
 
