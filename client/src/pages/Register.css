@@ -1,0 +1,61 @@
+@import './Login.css';
+
+.register-page .auth-card {
+  min-height: 640px;
+}
+
+.register-form {
+  gap: 1.5rem;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.register-grid .span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .register-grid .span-2 {
+    grid-column: span 1;
+  }
+}
+
+.file-label {
+  margin-top: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--border-radius-pill);
+  background: rgba(0, 86, 210, 0.12);
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px dashed rgba(0, 86, 210, 0.35);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.file-label input {
+  display: none;
+}
+
+.file-label:hover {
+  background: rgba(0, 86, 210, 0.2);
+  border-color: var(--primary-color);
+}
+
+.file-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.register-aside {
+  background: linear-gradient(135deg, #001f5c, #0284c7);
+}
+

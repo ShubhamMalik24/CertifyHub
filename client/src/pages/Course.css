@@ -1,0 +1,295 @@
+/* Modernized styles for course details page */
+.course-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--background-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+}
+
+.course-details h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.course-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.course-details strong {
+  color: var(--text-primary);
+}
+
+.course-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.go-to-course-btn, #enrollBtn, #downloadCertBtn, .edit-course-btn, #submitReviewBtn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.go-to-course-btn:hover, #enrollBtn:hover, #downloadCertBtn:hover, .edit-course-btn:hover, #submitReviewBtn:hover {
+  background-color: var(--primary-dark);
+}
+
+.reviews {
+  margin-top: 2.5rem;
+}
+
+.reviews h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary-dark);
+}
+
+#reviewsList > div {
+  background: var(--background-secondary);
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow-sm);
+  border: 1px solid #e5e7eb;
+}
+
+#reviewRating, #reviewComment {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+#reviewRating:focus, #reviewComment:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+/* Certificate Section Styles */
+.certificate-section {
+  margin-top: 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(52, 211, 153, 0.1));
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(16, 185, 129, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+}
+
+.certificate-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.certificate-badge svg {
+  width: 64px;
+  height: 64px;
+  color: #10b981;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3));
+  animation: certificateBounce 2s ease-in-out infinite;
+}
+
+@keyframes certificateBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.05); }
+}
+
+.certificate-badge h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #065f46;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.certificate-badge p {
+  font-size: 1.05rem;
+  color: #047857;
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+.cert-grade, .cert-score {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(16, 185, 129, 0.15);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cert-grade strong, .cert-score strong {
+  color: #065f46;
+  font-weight: 700;
+}
+
+.cert-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 24px rgba(16, 185, 129, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-download-btn svg {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.cert-download-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.cert-download-btn:hover:before {
+  width: 300px;
+  height: 300px;
+}
+
+.cert-download-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 12px 40px rgba(16, 185, 129, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Certificate Requirements */
+.certificate-requirements {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(96, 165, 250, 0.1));
+  border: 2px dashed rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+}
+
+.certificate-requirements h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.certificate-requirements p {
+  font-size: 1.05rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.certificate-requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificate-requirements li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.certificate-requirements li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .certificate-badge svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .certificate-badge h3 {
+    font-size: 1.5rem;
+  }
+
+  .cert-download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .certificate-requirements {
+    padding: 1.5rem;
+  }
+
+  .certificate-requirements h4 {
+    font-size: 1.25rem;
+  }
+}

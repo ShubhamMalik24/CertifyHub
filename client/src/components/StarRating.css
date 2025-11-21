@@ -1,0 +1,118 @@
+/* StarRating Component Styles */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars-container {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.star:disabled {
+  cursor: default;
+}
+
+.star:not(:disabled):hover {
+  transform: scale(1.1);
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  fill: #e5e7eb;
+  stroke: #d1d5db;
+  stroke-width: 1;
+  transition: fill 0.2s ease;
+}
+
+.star.filled .star-icon {
+  fill: #fbbf24;
+  stroke: #f59e0b;
+}
+
+.star.half-filled .star-icon {
+  fill: url(#half-fill);
+  stroke: #f59e0b;
+}
+
+.star.empty .star-icon {
+  fill: #e5e7eb;
+  stroke: #d1d5db;
+}
+
+/* Interactive states */
+.star-rating.interactive .star:not(:disabled):hover .star-icon {
+  fill: #fbbf24;
+  stroke: #f59e0b;
+}
+
+/* Size variants */
+.star-rating.small .star-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.star-rating.medium .star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.star-rating.large .star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Rating text */
+.rating-text {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.rating-count {
+  color: #9ca3af;
+  font-weight: normal;
+}
+
+/* Readonly state */
+.star-rating.readonly {
+  pointer-events: none;
+}
+
+.star-rating.readonly .rating-text {
+  color: #374151;
+}
+
+/* Focus states for accessibility */
+.star:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .star-rating.large .star-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .star-rating.medium .star-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .rating-text {
+    font-size: 12px;
+  }
+}
